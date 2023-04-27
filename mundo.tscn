@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnb0t2x4e3axx"]
+
+[ext_resource type="PackedScene" uid="uid://b3r6wsoldkrgy" path="res://personaje/personaje.tscn" id="1_248af"]
+[ext_resource type="PackedScene" uid="uid://bbs3w8ig3v8iw" path="res://plataformas.tscn" id="2_ulw80"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g8j3w"]
+font_color = Color(0.313726, 0.482353, 0.643137, 1)
+
+[node name="Mundo" type="Node2D"]
+
+[node name="Personaje" parent="." instance=ExtResource("1_248af")]
+position = Vector2(133, 150)
+
+[node name="Plataformas" parent="." instance=ExtResource("2_ulw80")]
+position = Vector2(1612, 675)
+scale = Vector2(34.4792, 0.797379)
+
+[node name="Plataformas2" parent="." instance=ExtResource("2_ulw80")]
+position = Vector2(921, 561)
+
+[node name="Plataformas3" parent="." instance=ExtResource("2_ulw80")]
+position = Vector2(1163, 465)
+scale = Vector2(0.778299, 2.54313)
+
+[node name="Plataformas6" parent="." instance=ExtResource("2_ulw80")]
+position = Vector2(-55, 329)
+scale = Vector2(0.778299, 9.57547)
+
+[node name="Plataformas4" parent="." instance=ExtResource("2_ulw80")]
+position = Vector2(1876, 358)
+
+[node name="Plataformas5" parent="." instance=ExtResource("2_ulw80")]
+position = Vector2(1508, 362)
+scale = Vector2(2.48, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 345.0
+offset_top = 520.0
+offset_right = 514.0
+offset_bottom = 598.0
+text = "A - acelerar
+S - Salto alto
+SpaceBar - Salto corto
+"
+label_settings = SubResource("LabelSettings_g8j3w")
+horizontal_alignment = 1
+vertical_alignment = 1
