@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dsbwhi511787j" path="res://personaje/Run.png" id="4_i4f8o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hgad"]
-size = Vector2(128, 120)
+size = Vector2(58, 83)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8f2v"]
 atlas = ExtResource("2_oip1s")
@@ -126,7 +126,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_5mvau")
 }],
 "loop": true,
-"name": &"Idle",
+"name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -178,16 +178,17 @@ position = Vector2(65, 61)
 script = ExtResource("1_2ar2r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(-3, 8.5)
 shape = SubResource("RectangleShape2D_6hgad")
 
 [node name="Spritesheet" type="AnimatedSprite2D" parent="."]
-position = Vector2(-3, 4)
+position = Vector2(1, 8)
 scale = Vector2(2.36, 2.36)
 sprite_frames = SubResource("SpriteFrames_vdiai")
-animation = &"jump"
+animation = &"idle"
 
 [node name="Feedback" type="Label" parent="."]
+visible = false
 offset_left = -34.0
 offset_top = -98.0
 offset_right = 39.0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnb0t2x4e3axx"]
+[gd_scene load_steps=5 format=3 uid="uid://cnb0t2x4e3axx"]
 
 [ext_resource type="PackedScene" uid="uid://b3r6wsoldkrgy" path="res://personaje/personaje.tscn" id="1_248af"]
 [ext_resource type="PackedScene" uid="uid://bbs3w8ig3v8iw" path="res://plataformas.tscn" id="2_ulw80"]
+[ext_resource type="Texture2D" uid="uid://bobjyrqul7c2b" path="res://icon.svg" id="3_tuxyb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g8j3w"]
 font_color = Color(0.313726, 0.482353, 0.643137, 1)
@@ -16,10 +17,10 @@ position = Vector2(1612, 675)
 scale = Vector2(34.4792, 0.797379)
 
 [node name="Plataformas2" parent="." instance=ExtResource("2_ulw80")]
-position = Vector2(921, 561)
+position = Vector2(2133, 557)
 
 [node name="Plataformas3" parent="." instance=ExtResource("2_ulw80")]
-position = Vector2(1163, 465)
+position = Vector2(2375, 461)
 scale = Vector2(0.778299, 2.54313)
 
 [node name="Plataformas6" parent="." instance=ExtResource("2_ulw80")]
@@ -27,10 +28,10 @@ position = Vector2(-55, 329)
 scale = Vector2(0.778299, 9.57547)
 
 [node name="Plataformas4" parent="." instance=ExtResource("2_ulw80")]
-position = Vector2(1876, 358)
+position = Vector2(3088, 354)
 
 [node name="Plataformas5" parent="." instance=ExtResource("2_ulw80")]
-position = Vector2(1508, 362)
+position = Vector2(2720, 358)
 scale = Vector2(2.48, 1)
 
 [node name="Label" type="Label" parent="."]
@@ -45,3 +46,23 @@ SpaceBar - Salto corto
 label_settings = SubResource("LabelSettings_g8j3w")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(133, 557)
+texture = ExtResource("3_tuxyb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(557, 550)
+texture = ExtResource("3_tuxyb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1027, 543)
+texture = ExtResource("3_tuxyb")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1562, 554)
+texture = ExtResource("3_tuxyb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(1961, 554)
+texture = ExtResource("3_tuxyb")
