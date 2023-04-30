@@ -22,6 +22,7 @@ func _physics_process(delta):
 
 func jump(delta):
 	
+	
 	if Input.is_action_just_pressed("ui_accept"):
 		jumpVelocity = -400
 		
@@ -36,14 +37,15 @@ func jump(delta):
 		canDobleJump  = true
 		estado = "idle"
 		
-	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("largeJump") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept")  and is_on_floor() or Input.is_action_just_pressed("largeJump") and is_on_floor():
 		velocity.y = jumpVelocity 
 		
-	if Input.is_action_just_pressed("ui_accept") and canDobleJump:
-		velocity.y = jumpVelocity
+	if Input.is_action_just_pressed("ui_accept") and canDobleJump and !is_on_floor():
 		canDobleJump = false
+		velocity.y = jumpVelocity
+		
 	
-	if Input.is_action_just_pressed("largeJump") and canDobleJump:
+	if Input.is_action_just_pressed("largeJump") and canDobleJump and !is_on_floor():
 		velocity.y = jumpVelocity
 		canDobleJump = false
 
